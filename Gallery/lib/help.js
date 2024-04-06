@@ -2,13 +2,13 @@ const prefix = global.prefa
   const pushname = m.pushName || "No Name"
 
 const helpmenu=` 
-「 *Maria BOT* 」
-♡ۣۜۜ፝͜͜͡͡✿➤ *INFO BOT*
-  ♡ۣۜۜ፝͜͜͡͡✿➤ Name: Maria BOT
-  ♡ۣۜۜ፝͜͜͡͡✿➤ Version: 1.0
+「 *9ine.x3* 」
+♡ۣۜۜ፝͜͜͡͡✿➤ *INFO*
+  ♡ۣۜۜ፝͜͜͡͡✿➤ Name: 9ine.x3
+  ♡ۣۜۜ፝͜͜͡͡✿➤ Version: 6.6.6
   ♡ۣۜۜ፝͜͜͡͡✿➤ Type: VPS
-  ♡ۣۜۜ፝͜͜͡͡✿➤ Owner: 𝑨𝒚𝒖𝒔𝒉-𝒑𝒂𝒏𝒅𝒆𝒚
-  ♡ۣۜۜ፝͜͜͡͡✿➤ wa.me/919931122319
+  ♡ۣۜۜ፝͜͜͡͡✿➤ Owner: false eye
+  ♡ۣۜۜ፝͜͜͡͡✿➤ wa.me/919539901834
   ♡ۣۜۜ፝͜͜͡͡✿➤ Prefix: 「  ${prefix}  」
  ♡ۣۜۜ፝͜͜͡͡✿➤ Total cmd: 51
  ♡ۣۜۜ፝͜͜͡͡✿➤Menu Type: 𝑯𝒆𝒍𝒑-𝑴𝒆𝒏𝒖
@@ -77,11 +77,11 @@ const helpmenu=`
 ⌬${prefix}runtime
 
 
-🌹𝒎𝒐𝒓𝒆 𝒄𝒐𝒎𝒎𝒂𝒏𝒅𝒔 𝒄𝒐𝒎𝒊𝒏𝒈 𝒔𝒐𝒐𝒏
+More coming soon 🤫🧏🏻
 
-『 Maria-Md 』
-   Based on: Miku, 
-   created by : Ayush pandey
-   ©️ Ayush botz inc 
+『 9ine.x3 』
+   Based on: Daddy Toji, 
+   created by : false eye
+   ©️ 9ine.x3 ft. false eye
 `
 module.exports = helpmenu
