@@ -1,5 +1,5 @@
 const prefix = global.prefa
-const funmenu=`「 *Maria BOT* 」
+const funmenu=`「 *9ine.x3* 」
 ┌──⊰ _*🎉FUN🎉*_
 │⊳🎟️ ${prefix}truth
 │⊳🎟️ ${prefix}dare
