@@ -1570,16 +1570,16 @@ case 'truth':
   const txt = `╭─「 *Hola* 」
 │⋊ User: ${pushname} 
 │⋊ Bot:  ${botname}
-│⋊ ℙ𝕣𝕖𝕗𝕚𝕩:  *${prefix}*
-│⋊ 𝔻𝕒𝕥𝕖: ${xdate}
-│⋊ 𝕋𝕚𝕞𝕖:  ${xtime}
-│⋊ 𝕆𝕨𝕟𝕖𝕣: ${ownername}
-│⋊ 𝕧𝕖𝕣𝕤𝕚𝕠𝕟: ${mver}
-│⋊ ℍ𝕠𝕤𝕥: ${os.hostname()}
-│⋊ ℙ𝕝𝕒𝕥𝕗𝕠𝕣𝕞: ${os.platform()} 
-│⋊ ℝ𝕦𝕟𝕥𝕚𝕞𝕖: ${runtime(process.uptime())}
-│⋊ 𝕋𝕠𝕥𝕒𝕝𝕔𝕞𝕕: ${mariafeature()}
-│⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕣𝕠𝕦𝕡: https://gg.gg/Maria-support
+│⋊ Prefix:  *${prefix}*
+│⋊ Date: ${xdate}
+│⋊ Time:  ${xtime}
+│⋊ Owner: ${ownername}
+│⋊ Version: ${mver}
+│⋊ Host: ${os.hostname()}
+│⋊ Platform: ${os.platform()} 
+│⋊ Runtime: ${runtime(process.uptime())}
+│⋊ Total CMD: ${mariafeature()}
+│⋊ TG Channel: https://t.me/sarca_stics
 ╰────────────┈平和
 Here's the list of my Commands.🔖
 ${readmore}
@@ -1787,16 +1787,16 @@ case 'public': {
 │⊳ 💦  ${prefix}ass
 │⊳ 💦  ${prefix}trap
 │⊳ 💦  ${prefix}maal
-│⊳ 💦  ${prefix}ʀɪʙʙᴏɴꜱ
-│⊳ 💦  ${prefix}ʜᴀᴛꜱᴜɴᴇᴍɪᴋᴜ
-│⊳ 💦  ${prefix}ʜᴇᴀᴅʙᴀɴᴅ
-│⊳ 💦  ${prefix}ꜰᴏxɢɪʀʟ
-│⊳ 💦  ${prefix}ᴀɴɪᴍᴀʟᴇᴀʀꜱ
-│⊳ 💦  ${prefix}ʙʀᴀ
-│⊳ 💦  ${prefix}ꜱᴋɪʀᴛ
-│⊳ 💦  ${prefix}ʙʀᴇᴀꜱᴛꜱ
-│⊳ 💦  ${prefix}ᴛᴀᴛᴛᴏᴏ
-│⊳ 💦  ${prefix}ᴄʜᴀɪɴ
+│⊳ 💦  ${prefix}ribbons
+│⊳ 💦  ${prefix}hatsunemiku
+│⊳ 💦  ${prefix}headband
+│⊳ 💦  ${prefix}foxgirl
+│⊳ 💦  ${prefix}animalears
+│⊳ 💦  ${prefix}bra
+│⊳ 💦  ${prefix}skirt
+│⊳ 💦  ${prefix}breasts
+│⊳ 💦  ${prefix}tattoo
+│⊳ 💦  ${prefix}chain
 └──────────⊰ 
 `
         Maria.sendMessage(m.chat, { image: { url: "./Gallery/nsfw.jpg" }, caption: nsfwmenu }, { quoted: m });
@@ -1846,7 +1846,7 @@ case 'ribbons':
     if (!m.isGroup) return reply(mess.group);
     if (!isNsfw) return reply(mess.nsfw);
     const waifpoudd = await axios.get(`https://fantox-apis.vercel.app/${command}`);
-    Maria.sendMessage(m.chat, { caption: 'OMG🥵', image: { url: waifpoudd.data.url } }, { quoted: m });
+    Maria.sendMessage(m.chat, { caption: 'sheesh🥵', image: { url: waifpoudd.data.url } }, { quoted: m });
     break;
     
         case 'blowjob':
@@ -1918,7 +1918,7 @@ case 'maal': {
   reply(mess.wait);
   await Maria.sendMessage(m.chat, {
     image: await getBuffer('https://ayushhh.onrender.com'),
-    caption: 'OMG 🥵',
+    caption: 'sheesh🥵',
   }, { quoted: m });
 }
 break;
@@ -1974,7 +1974,7 @@ case 'hidetag': {
   
  *Message : ${text}*\n\n`
  for (let mem of groupAdmins) {
- teks += `🤴 @${mem.split('@')[0]}\n`
+ teks += `🌟 @${mem.split('@')[0]}\n`
  }
  Maria.sendMessage(m.chat, { text: teks, mentions: groupAdmins}, { quoted: m })
  }
@@ -2030,7 +2030,7 @@ break
 
 case 'apk':
 case 'apkdl':{
-if (!text) return reply("🧩What apk u wanna download?")
+if (!text) return reply("🧩What apk you wanna download?")
 let resMaria = await fetch(`https://vihangayt.me/download/apk?id=${text}`)
 let jsonMaria = await resMaria.json()
 Maria.sendMessage(from, { document: { url: jsonMaria.data.dllink}, fileName : jsonMaria.data.name, mimetype: 'application/vnd.android.package-archive'}, {quoted:m})
@@ -2071,7 +2071,7 @@ case 'welcome':
 
 
 case 'git': case 'gitclone':
-if (!args[0]) return reply(`🧩Where is the link?\n🔮Example :\n${prefix}${command} https://github.com/AYUSH-PANDEY023/Maria-Md `)
+if (!args[0]) return reply(`🧩Where is the link?\n🔮Example :\n${prefix}${command} https://github.com/false-eye/false-eye`)
 if (!isUrl(args[0]) && !args[0].includes('github.com')) return replygcMaria(`Link invalid!!`)
 let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
     let [, user, repo] = args[0].match(regex1) || []
@@ -2139,7 +2139,7 @@ case 'naturetypography':
 case 'quotesunder':
 case 'shinetext':{
 
-if (!q) return reply(`🔮Example : ${prefix+command} Ayush`) 
+if (!q) return reply(`🔮Example : ${prefix+command} 9ine.x3`) 
 let link
 if (/stonetext/.test(command)) link = 'https://photooxy.com/online-3d-white-stone-text-effect-utility-411.html'
 if (/writeart/.test(command)) link = 'https://photooxy.com/logo-and-text-effects/write-art-quote-on-wood-heart-370.html'
@@ -2178,7 +2178,7 @@ if (!m.isGroup) return replay(mess.grouponly)
             let [poll, opt] = text.split("|")
             if (text.split("|") < 2)
                 return await reply(
-                    `Mention question and atleast 2 options\nExample: ${prefix}poll Who is best admin?|Ayush,Maria,Owner...`
+                    `Mention question and atleast 2 options\nExample: ${prefix}poll Who is Retarded?|Dennis,Shelon,Others...`
                 )
             let options = []
             for (let i of opt.split(',')) {
@@ -2201,7 +2201,7 @@ case "creategc":
           try {
             let cret = await Maria.groupCreate(args.join(" "), []);
             let response = await Maria.groupInviteCode(cret.id);
-            teks = ` 《༒𝙂𝙧𝙤𝙪𝙥 𝘾𝙧𝙚𝙖𝙩𝙚༒》
+            teks = ` 《𝙂𝙧𝙤𝙪𝙥 𝘾𝙧𝙚𝙖𝙩𝙚》
 
 ☤Name : ${cret.subject}
 ☤Owner : @${cret.owner.split("@")[0]}
@@ -2232,22 +2232,22 @@ https://chat.whatsapp.com/${response}
 case 'developer':
 case 'dev':
     const devmod = `  🍥 *Moderators* 🍥\n\n
-*🎫Ayush* @919931122319
+*🎫false eye* @919539901834
 
-*🎫xeon* @916909137213
+*🎫9inex3* @918590717599
 
-*🎫Pikachu* @918811074852
+*🎫Sunshine* @666
 
-*🎫OldUser* @918602239106
+*🎫Your GF* @999
  \n
-\n📛*Don't Spam them to avoid Blocking !*\n\n For any help, type *${prefix}support* and ask in the group.\n\n*✨️Thanks for using Maria-Md* `;
+\n📛*Don't Spam them to avoid Blocking !*\n\n For any help, type *${prefix}support* and ask in the group.\n\n*✨️Thanks* `;
 
-    Maria.sendMessage(m.chat, { text: devmod, mentions: ["919931122319@s.whatsapp.net", "918811074852@s.whatsapp.net", "916909137213@s.whatsapp.net","918602239106@s.whatsapp.net"] }, { quoted: m });
+    Maria.sendMessage(m.chat, { text: devmod, mentions: ["919539901834@s.whatsapp.net", "918590717599@s.whatsapp.net"] }, { quoted: m });
     break;
 
     case 'list': case 'listmenu': {  
     const listmenu = require("./Gallery/lib/list.js");
-    Maria.sendMessage(m.chat, { video: { url: 'https://picfiles.alphacoders.com/623/623720.jpeg ' }, caption: listmenu }, { quoted: m });
+    Maria.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/1de75dc438bfec68d0bca.jpg ' }, caption: listmenu }, { quoted: m });
 }
 break;
 
@@ -2255,7 +2255,7 @@ case 'help1': case 'h1':{
       
 const h3menu = require("./Gallery/lib/download.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h3menu, gifPlayback: true }, { quoted: m });
+Maria.sendMessage(m.chat, { image: { url: `https://telegra.ph/file/1de75dc438bfec68d0bca.jpg` }, caption: h3menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2263,7 +2263,7 @@ case 'help2': case 'h2':{
       
 const h3menu = require("./Gallery/lib/general.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h3menu, gifPlayback: true }, { quoted: m });
+Maria.sendMessage(m.chat, { image: { url: `https://telegra.ph/file/1de75dc438bfec68d0bca.jpg` }, caption: h3menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2272,7 +2272,7 @@ Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/
       
 const h3menu = require("./Gallery/lib/owner.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h3menu, gifPlayback: true }, { quoted: m });
+Maria.sendMessage(m.chat, { image: { url: `https://telegra.ph/file/1de75dc438bfec68d0bca.jpg` }, caption: h3menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2283,7 +2283,7 @@ Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/
                
 const h4menu = require("./Gallery/lib/search.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h4menu, gifPlayback: true }, { quoted: m });
+Maria.sendMessage(m.chat, { image: { url: `https://telegra.ph/file/1de75dc438bfec68d0bca.jpg` }, caption: h4menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2293,7 +2293,7 @@ Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/
          
 const h5menu = require("./Gallery/lib/group.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h5menu, gifPlayback: true }, { quoted: m });
+Maria.sendMessage(m.chat, { image: { url: `https://telegra.ph/file/1de75dc438bfec68d0bca.jpg` }, caption: h5menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2302,7 +2302,7 @@ Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/
                
 const h6menu = require("./Gallery/lib/fun.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h6menu, gifPlayback: true }, { quoted: m });
+Maria.sendMessage(m.chat, { image: { url: `https://telegra.ph/file/1de75dc438bfec68d0bca.jpg` }, caption: h6menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2311,7 +2311,7 @@ Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/
                
 const h7menu = require("./Gallery/lib/weeb.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h7menu, gifPlayback: true }, { quoted: m });
+Maria.sendMessage(m.chat, { image: { url: `https://telegra.ph/file/1de75dc438bfec68d0bca.jpg` }, caption: h7menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2320,7 +2320,7 @@ Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/
                
 const h8menu = require("./Gallery/lib/Nsfw.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h8menu, gifPlayback: true }, { quoted: m });
+Maria.sendMessage(m.chat, { image: { url: `https://telegra.ph/file/1de75dc438bfec68d0bca.jpg` }, caption: h8menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2329,7 +2329,7 @@ Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/
                
 const h9menu = require("./Gallery/lib/SnapBlend.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h9menu, gifPlayback: true }, { quoted: m });
+Maria.sendMessage(m.chat, { image: { url: `https://telegra.ph/file/1de75dc438bfec68d0bca.jpg` }, caption: h9menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2338,14 +2338,14 @@ Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/
                
 const h10menu = require("./Gallery/lib/other.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h10menu, gifPlayback: true }, { quoted: m });
+Maria.sendMessage(m.chat, { image: { url: `https://telegra.ph/file/1de75dc438bfec68d0bca.jpg` }, caption: h10menu, gifPlayback: true }, { quoted: m });
         }
         break
     
 /////////////////////////////////////////////////////
 
 if(isCmd){
-          reply (`No such command, Baka!`)
+          reply (`No such command, Are you retarded or what?!`)
   
       }	 			
 
