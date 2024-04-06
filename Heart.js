@@ -23,7 +23,7 @@ let afk = require("./Gallery/lib/afk");
 const { fetchBuffer, buffergif } = require("./Gallery/lib/myfunc2")
 
 /////log
-global.modnumber = '919060791616' 
+global.modnumber = '919539901834' 
 //Gallery/database
 let ntilinkall =JSON.parse(fs.readFileSync('./Gallery/database/antilink.json'));
 const isnsfw = JSON.parse(fs.readFileSync('./Gallery/database/nsfw.json'));
@@ -193,7 +193,7 @@ async function Telesticker(url) {
             data2 = await axios(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getFile?file_id=${fileId}`)
             result = {
             status: 200,
-            author: '💙𓆩‎✘AʏᴜSʜ✘𓆪_✰',
+            author: '@false_eye',
             url: "https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" + data2.data.result.file_path
             }
             mariayresult.push(result)
@@ -235,7 +235,7 @@ async function Telesticker(url) {
         }
         
         if (autobio) {
-            Maria.updateProfileStatus(`Hey, future leaders! 🌟 Maria-Md is here to inspire and lead, thanks to Ayush Botz, Inc. 🚀 ${runtime(process.uptime())} `).catch(_ => _)
+            Maria.updateProfileStatus(`9ine.x3 🚀 ${runtime(process.uptime())} `).catch(_ => _)
         }
         if (m.sender.startsWith('212') && global.anti212 === true) {
             return Maria.updateBlockStatus(m.sender, 'block')
@@ -386,7 +386,7 @@ reply(`Succes`)
 } else {
 var memeg = await Maria.updateProfilePicture(botNumber, { url: medis })
 fs.unlinkSync(medis)
-reply(`Success, Thank you for the new profile photo, my darling 😚`)
+reply(`Success, Thank you for the new profile photo`)
 }
 }
 break
@@ -608,9 +608,9 @@ break
                         contextInfo: {
                             externalAdReply: {
                                 showAdAttribution: true,
-                                title: ' *🎐Maria Broadcast🎐* ',
+                                title: ' *🎐9ine.x3 Broadcast🎐* ',
                                 body: `Sent ${i.length} Group`,
-                                thumbnailUrl: 'https://telegra.ph/file/3fd18ee11521117c7c882.jpg',
+                                thumbnailUrl: 'https://telegra.ph/file/1de75dc438bfec68d0bca.jpg',
                                 sourceUrl: global.link,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -811,7 +811,7 @@ case 'tag': case 'tagall': case 'all':{
                 if (!isAdmins && !isGroupOwner && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 if (args[0] === 'close') {
-                    await Maria.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`*_SUCCESSFULLY CLOSED THE GRUP_\n\ngrup has been closed for the time being 😽*`)).catch((err) => reply(json(err)))
+                    await Maria.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`*_SUCCESSFULLY CLOSED THE GROUP_\n\ngroup has been closed for the time being *`)).catch((err) => reply(json(err)))
                 } else if (args[0] === 'open') {
                     await Maria.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`*THE GROUP HAS BEEN OPENED SUCCESSFULLY*`)).catch((err) => reply(json(err)))
                 } else {
@@ -839,12 +839,12 @@ case 'tag': case 'tagall': case 'all':{
           let response = await Maria.groupInviteCode(m.chat);
           Maria.sendText(
             m.sender,
-            ` 🤖𝐵𝑜𝑡 𝑛𝑎𝑚𝑒:- Maria Bot\n\n🔖𝐺𝑟𝑜𝑢𝑝 𝑛𝑎𝑚𝑒:- ${groupMetadata.subject}\n\n🔰𝐺𝑟𝑜𝑢𝑝 𝑙𝑖𝑛𝑘:- https://chat.whatsapp.com/${response}`,
+            ` 𝐵𝑜𝑡 𝑛𝑎𝑚𝑒:- 9ine.x3\n\n🔖𝐺𝑟𝑜𝑢𝑝 𝑛𝑎𝑚𝑒:- ${groupMetadata.subject}\n\n🔰𝐺𝑟𝑜𝑢𝑝 𝑙𝑖𝑛𝑘:- https://chat.whatsapp.com/${response}`,
             m,
             { detectLink: true }
           );
         }
-        await Maria.sendMessage(m.chat, { video: { url: `https://media.tenor.com/hzWYhzhMTeEAAAPo/maria-useless.mp4` }, caption: 'I sent you the Group Link in personal message.\n Pls check.', gifPlayback: true }, { quoted: m });
+        await Maria.sendMessage(m.chat, { video: { url: `https://telegra.ph/file/6edbcb1d617098759d8af.mp4` }, caption: 'I sent you the Group Link in personal message.\n Pls check.', gifPlayback: true }, { quoted: m });
         break
         
             case 'revoke':
@@ -861,22 +861,22 @@ case 'tag': case 'tagall': case 'all':{
             
             case "sc": case "script": case"repo": {
 const axios = require("axios");
-let repoInfo = await axios.get("https://api.github.com/repos/AYUSH-PANDEY023/Maria-MD");
+let repoInfo = await axios.get("https://api.github.com/repos/false-eye/");
         let repo = repoInfo.data;
         console.log(repo);
 
-   const scritxt = `*🚀𝑴𝒂𝒓𝒊𝒂-𝑩𝒐𝒕-𝑺𝒄𝒓𝒊𝒑𝒕🚀*\n
-  *🌟Creator:* 𝑨𝒚𝒖𝒔𝒉 𝒑𝒂𝒏𝒅𝒆𝒚\n
+   const scritxt = `*9ine.x3*\n
+  *🌟Creator:* 𝒇𝒂𝒍𝒔𝒆 𝒆𝒚𝒆\n
   *🌟 Repo:* ${repo.html_url}\n
   *🌟 Total Forks:* ${repo.forks_count}\n
   *⭐ Total Stars:* ${repo.stargazers_count}\n
   *📁 Repo Size:* ${(repo.size/1024).toFixed(2)} MB\n
   *📅 Last Updated:* ${repo.updated_at}\n
  
-©️ *Ayush Bots inc* 
-*❝ Dont forget to give a Star ⭐ to the repo.*`
+©️ *9ine.x3 ft. false eye* 
+*sighh!!*`
 
-        Maria.sendMessage(from, { video: { url: 'https://media.tenor.com/Zco-fadJri4AAAPo/code-matrix.mp4' }, gifPlayback: true, caption: scritxt }, { quoted: m })
+        Maria.sendMessage(from, { video: { url: 'https://telegra.ph/file/94fea97e8b4c0fb9ba871.mp4' }, gifPlayback: true, caption: scritxt }, { quoted: m })
 }
         break;
         
@@ -995,7 +995,7 @@ break
                 Maria.sendMessage(m.chat, {
                     document: audio,
                     mimetype: 'audio/mp3',
-                    fileName: `Maria-bot.mp3`
+                    fileName: `9inex3.mp3`
                 }, {
                     quoted: m
                 })
@@ -1122,7 +1122,7 @@ break
             }
             break
             case 'fliptext': {
-                if (args.length < 1) return reply(`Example:\n${prefix}fliptext Ayushy`)
+                if (args.length < 1) return reply(`Example:\n${prefix}fliptext 9ine.x3`)
                 quere = args.join(" ")
                 flipe = quere.split('').reverse().join('')
                 reply(`\`\`\`「 FLIP TEXT 」\`\`\`\n*•> Normal :*\n${quere}\n*•> Flip :*\n${flipe}`)
@@ -1254,15 +1254,15 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
 //////////////////////////////
             case "rules":
       
-        const helptxt = `_*📍[Rules for Maria Md usage]📍*_\n\n\n*>>>* use -support to get the Official group link in your dm.\n\n*--->* If you want to add Maria-Md in your group the contact the owner by *-owner/-mods* \n\n*--->* Dont use wrong command, use the command given in the *-help* list \n\n* Dont spam the bot with commands if Maria-Md is not responding, its means the maybe owner is offline or facing internet issue. \n\n*IF YOU DONT FOLLOW THE RULES THEN YOU WILL BE BANNED* 🚫 \n\n\n*©️ Ayush Bots inc* `
+        const helptxt = `_*📍[Rules for 9ine.x3 usage]📍*_\n\n\n*>>>* use .support to get the Official group link in your dm.\n\n*--->* If you want to add 9ine.x3 in your group the contact the owner by *.owner/.mods* \n\n*--->* Dont use wrong command, use the command given in the *.help* list \n\n* Dont spam the bot with commands if 9ine.x3 is not responding, its means the maybe owner is offline or facing internet issue. \n\n*IF YOU DONT FOLLOW THE RULES THEN YOU WILL BE BANNED* 🚫 \n\n\n*©️ 9ine.x3 ft. false eye* `
 
-        Maria.sendMessage(from, { video: { url: 'https://c.tenor.com/geMdtLCXZkAAAAPo/rules.mp4' }, gifPlayback: true, caption: helptxt }, { quoted: m })
+        Maria.sendMessage(from, { video: { url: 'https://telegra.ph/file/15276bdf77985299af68d.mp4' }, gifPlayback: true, caption: helptxt }, { quoted: m })
 
         break
       case 'hii': case 'hi': case 'Hi':
        
         
-        let txxt = `👋🏻 Hi *${pushname}*, i am  *Maria-Md*📍\nA whatsapp bot created by: Ayush \n\n I don't have time for chit-chat Darling. Use command from *${prefix}help* list if you want me to do anything.`
+        let txxt = `Sup *${pushname}*, I'm  *9ine.x3*📍\nCreated by: 𝒇𝒂𝒍𝒔𝒆 𝒆𝒚𝒆  \n\n I don't have time for chit-chat. Use command from *${prefix}help* list if you want me to do anything.`
 
         Maria.sendMessage(m.chat, { image: { url: "./Gallery/ch1.jpg" }, caption: txxt, gifPlayback: true }, { quoted: m });
         break
@@ -1270,7 +1270,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
      
         let tex = `📍Welcome to My Developer's Hub!📍
 
-https://chat.whatsapp.com/Jllsl2OaQNoBjepxzuVsZM`
+https://t.me/sarca_stics`
 
         await Maria.sendMessage(m.sender,{ image: {url: "./Gallery/sup.jpg"}, caption: `${tex}` },);
 
@@ -1279,13 +1279,13 @@ https://chat.whatsapp.com/Jllsl2OaQNoBjepxzuVsZM`
 
       case "info":
             Maria.sendMessage(from, { react: { text: "ℹ️", key: m.key }}) 
-        let ifx = `🌟『𝕄𝕒𝕣𝕚𝕒-𝕄𝕕 』🌟
-*🌟Description:* A WhatsApp Bot With Rich  features based on Maria
-*👤Creator:*  𝑨𝒚𝒖𝒔𝒉 𝒑𝒂𝒏𝒅𝒆𝒚
+        let ifx = `🌟『9ine.x3』🌟
+*🌟Description:* A WhatsApp Bot 🤫🧏🏻
+*👤Creator:*  𝒇𝒂𝒍𝒔𝒆 𝒆𝒚𝒆 :)
 *🕸Version:* 1.2.0
-*🎀supportgc:* https://gg.gg/Maria-support
+*🎀supportgc:* Don't have one 💀
 *🚦Uptime:* ${runtime(process.uptime())}\n
-*Powered by Ayush*`
+*9ine.x3 ft. false eye*`
 Maria.sendMessage(m.chat, { image: { url: "./Gallery/ch3.jpg" }, caption: ifx, gifPlayback: true }, { quoted: m });
         break
 
@@ -1300,7 +1300,7 @@ Maria.sendMessage(m.chat, { image: { url: "./Gallery/ch3.jpg" }, caption: ifx, g
 ///////////////////////////////////////////////////
 case 'google': {
 Maria.sendMessage(from, { react: { text: "🔎", key: m.key }}) 
-if (!q) return reply(`Example : ${prefix + command} 𝘈𝘺𝘶𝘴𝘩 𝘱𝘢𝘯𝘥𝘦𝘺`)
+if (!q) return reply(`Example : ${prefix + command} is toji a womanizer?`)
 let google = require('google-it')
 google({'query': text}).then(res => {
 let teks = `「🏮 *Google Search Engine*🏮」 \n\n
@@ -1316,7 +1316,7 @@ reply(teks)
 break
 
 case 'wanumber': case 'nowa': case 'searchnumber':{
-           	if (!text) return reply(`📵🔢 Enter a number ending with 'x'\n\nExample: ${prefix + command} 9199311223xx`)
+           	if (!text) return reply(`📵🔢 Enter a number ending with 'x'\n\nExample: ${prefix + command} 9195399018xx`)
 var inputnumber = text.split(" ")[0]
         
         reply(`📱🔍 Exploring for WhatsApp accounts within the range...`)
@@ -1336,7 +1336,7 @@ var inputnumber = text.split(" ")[0]
         }
         var text66 = `🔖 *WhatsApp Numbers Directory*\n\n`
         var nobio = `\n*Bio:* || \nHey there! I am using WhatsApp.\n`
-        var nowhatsapp = `\n*Numbers with no WhatsApp account within provided range.*\n`
+        var nowhatsapp = `\n*Niggas with no WhatsApp account within provided range.*\n`
         for (let i = 0; i < randomxx; i++) {
             var nu = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
             var status1 = nu[Math.floor(Math.random() * nu.length)]
@@ -1567,9 +1567,9 @@ case 'truth':
                            break
                            
   case 'menu': case 'help': case 'h': 
-  const txt = `╭─「 *Konichiwa* 」
-│⋊ 𝕌𝕤𝕖𝕣: ${pushname} 
-│⋊ 𝔹𝕠𝕥:  ${botname}
+  const txt = `╭─「 *Hola* 」
+│⋊ User: ${pushname} 
+│⋊ Bot:  ${botname}
 │⋊ ℙ𝕣𝕖𝕗𝕚𝕩:  *${prefix}*
 │⋊ 𝔻𝕒𝕥𝕖: ${xdate}
 │⋊ 𝕋𝕚𝕞𝕖:  ${xtime}
