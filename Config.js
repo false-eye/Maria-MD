@@ -2,24 +2,24 @@ const fs = require('fs')
 const chalk = require('chalk')
 
 //contact details
-global.ownernumber = ['919931122319']
-global.ownername = "💙𓆩‎✘AʏᴜSʜ✘𓆪_✰"//owner name
-global.ytname = "YT: AyushBotz.inc"
-global.socialm = "GitHub: Ayushpandey023"
-global.location = "Indian"
+global.ownernumber = ['919539901834']
+global.ownername = "𝒇𝒂𝒍𝒔𝒆 𝒆𝒚𝒆"//owner name
+global.ytname = "Telegram: @false_eye"
+global.socialm = "Instagram: @false_eye"
+global.location = "Epstein Island"
 
-global.botname = '𝐌𝐀𝐑𝐈𝐀-𝐌𝐃' //name of the bot
+global.botname = '9ine.x3' //name of the bot
 
 //sticker details
-global.stickername = '💙𓆩‎✘AʏᴜSʜ✘𓆪_✰'
-global.packname = 'Sticker By'
-global.author = 'Maria Bot'
+global.stickername = '9ine.x3 ft. false eye'
+global.packname = '9ine.x3'
+global.author = '@false_eye'
 //console view/theme
-global.themeemoji = '🧩'
-global.wm = "Ayush botz inc."
+global.themeemoji = '💤'
+global.wm = "9ine.x3"
 
 //theme link
-global.link = 'https://whatsapp.com/channel/0029VaImo5ZG3R3qjKOdyr1I'
+global.link = 'https://t.me/sarca_stics'
 
 //custom prefix
 global.prefa = ['.']
@@ -38,7 +38,7 @@ global.autoread_status = false //auto view status/story
 
 //reply messages
 global.mess = {
-    done: '*here you go!* \n\n*🎀 Maria Bot 🎀*\n\n*🧩 Bot link:* \nhttps://github.com/AYUSH-PANDEY023/Maria-MD\n',
+    done: '*here you go!*',
     prem: '*This feature can be used by premium user only*',
     admin: '*This feature can be used by admin only*',
     botAdmin: '*This feature can only be used when the bot is a group admin* ',
