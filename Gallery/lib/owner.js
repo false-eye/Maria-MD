@@ -2,7 +2,7 @@ const prefix = global.prefa
   const pushname = m.pushName || "No Name"
 
 const ownermenu=`
-┌──⊰ _*🧩OWNER🧩*_
+┌──⊰ _*🛐OWNER🛐*_
 │⊳ ♠️ ${prefix}session
 │⊳ ♠️ ${prefix}join
 │⊳ ♠️ ${prefix}mode *[self/public]*
