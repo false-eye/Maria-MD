@@ -91,7 +91,7 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
 	for (let i of kon) {
 	        list.push({
 	    	displayName: await Maria.getName(i + '@s.whatsapp.net'),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await Maria.getName(i + '@s.whatsapp.net')}\nFN:${await Maria.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Ponsel\nitem2.EMAIL;type=INTERNET:maria.md.ayush@gmail.com\nitem2.X-ABLabel:Email\nitem3.URL:https://www.instagram.com/ayushpandeyy_023\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;India;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await Maria.getName(i + '@s.whatsapp.net')}\nFN:${await Maria.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Ponsel\nitem2.EMAIL;type=INTERNET: aslampnly5@gmail.com\nitem2.X-ABLabel:Email\nitem3.URL:https://www.instagram.com/false_eye\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;India;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
 	Maria.sendMessage(jid, { contacts: { displayName: global.ownername, contacts: list }, ...opts }, { quoted })
