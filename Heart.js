@@ -1529,7 +1529,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
 ❁ ═══ ❃•✍🏻 *CONTRIBUTE* ✍🏻•❃ ═══ ❁
 \`\`\`Feel free to open issues regarding any problems or if you have any feature feel free to contact owner by typing ${prefix}owner or ${prefix}mods`
 
-Maria.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/35a8070434cf5dfaeed28.jpg }, caption: pifx, gifPlayback: true }, { quoted: m });
+Maria.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/35a8070434cf5dfaeed28.jpg" }, caption: pifx, gifPlayback: true }, { quoted: m });
         break;
 
 
