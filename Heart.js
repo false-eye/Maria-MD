@@ -32,7 +32,7 @@ let afk = require("./Gallery/lib/afk");
 const { fetchBuffer, buffergif } = require("./Gallery/lib/myfunc2")
 
 /////log
- global.modnumber = '919060791616' 
+ global.modnumber = '919539901834' 
 //Gallery/database
 let ntilinkall =JSON.parse(fs.readFileSync('./Gallery/database/antilink.json'));
 // let autoblck =JSON.parse(fs.readFileSync('./Gallery/database/autoblock.json'));
@@ -186,7 +186,7 @@ var Ayushlod = [
 "《 ████████████》100%",
 "Done ✅️"
 ]
-let { key } = await Maria.sendMessage(from, {text: 'ʟᴏᴀᴅɪɴɢ...'})
+let { key } = await Maria.sendMessage(from, {text: 'Loading...'})
 
 for (let i = 0; i < Ayushlod.length; i++) {
 await Maria.sendMessage(from, {text: Ayushlod[i], edit: key });
@@ -233,7 +233,7 @@ async function Telesticker(url) {
             data2 = await axios(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getFile?file_id=${fileId}`)
             result = {
             status: 200,
-            author: '💙𓆩‎✘AʏᴜSʜ✘𓆪_✰',
+            author: '@false_eye',
             url: "https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" + data2.data.result.file_path
             }
             mariayresult.push(result)
@@ -275,7 +275,7 @@ async function Telesticker(url) {
         }
         
         if (autobio) {
-            Maria.updateProfileStatus(`Hey, future leaders! 🌟 Maria-Md is here to inspire and lead, thanks to Ayush Botz, Inc. 🚀 ${runtime(process.uptime())} `).catch(_ => _)
+            Maria.updateProfileStatus(`Hey!,🌟 It's 9ine.x3 Made By 𝒇𝒂𝒍𝒔𝒆 𝒆𝒚𝒆. 💤 ${runtime(process.uptime())} `).catch(_ => _)
         }
         if (m.sender.startsWith('212') && global.anti212 === true) {
             return Maria.updateBlockStatus(m.sender, 'block')
@@ -395,8 +395,8 @@ const mariafeature = () =>{
             
             case 'stealdp': {
             const user = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net';
-        if (user === botNumber) return m.reply('_🙅🏻 I can not steal my own profile picture, Darling 🍭_');
-        const {key} = await m.reply("𝒑𝒍𝒆𝒂𝒔𝒆 𝒘𝒂𝒊𝒕 𝑫𝒂𝒓𝒍𝒊𝒏𝒈 🍭");
+        if (user === botNumber) return m.reply('_🙅🏻 I can not steal my own profile picture, Nigga_');
+        const {key} = await m.reply("𝒑𝒍𝒆𝒂𝒔𝒆 𝒘𝒂𝒊𝒕...");
         let picture;
         try {
             picture = await getBuffer(await Maria.profilePictureUrl(user, 'image'));
@@ -501,7 +501,7 @@ reply(`Succes`)
 } else {
 var memeg = await Maria.updateProfilePicture(botNumber, { url: medis })
 fs.unlinkSync(medis)
-reply(`𝑺𝒖𝒄𝒄𝒆𝒔𝒔, 𝑻𝒉𝒂𝒏𝒌 𝒚𝒐𝒖 𝒇𝒐𝒓 𝒕𝒉𝒆 𝒏𝒆𝒘 𝒑𝒓𝒐𝒇𝒊𝒍𝒆 𝒑𝒉𝒐𝒕𝒐, 𝒎𝒚 𝒅𝒂𝒓𝒍𝒊𝒏𝒈 😚`)
+reply(`𝑺𝒖𝒄𝒄𝒆𝒔𝒔, 𝑻𝒉𝒂𝒏𝒌 𝒚𝒐𝒖 𝒇𝒐𝒓 𝒕𝒉𝒆 𝒏𝒆𝒘 𝒑𝒓𝒐𝒇𝒊𝒍𝒆 𝒑𝒉𝒐𝒕𝒐.`)
 }
 }
 break;
@@ -790,7 +790,7 @@ break;
             case 'leave':
                 if (!isCreator) return reply(mess.owner)
                 if (!m.isGroup) return reply(mess.group)
-                reply('🟨Bye Everyone 🥺')
+                reply('🟨Bye Everyone...')
                 await Maria.groupLeave(m.chat)
                 break;
             case 'bcgc':
@@ -809,9 +809,9 @@ break;
                         contextInfo: {
                             externalAdReply: {
                                 showAdAttribution: true,
-                                title: ' *🎐Maria Broadcast🎐* ',
+                                title: ' *🎐9ine.x3 Broadcast🎐* ',
                                 body: `Sent ${i.length} Group`,
-                                thumbnailUrl: 'https://telegra.ph/file/3fd18ee11521117c7c882.jpg',
+                                thumbnailUrl: 'https://telegra.ph/file/81557b0cd9531411346f3.jpg',
                                 sourceUrl: global.link,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -1043,7 +1043,7 @@ case 'tag': case 'tagall': case 'all':{
                 if (!isAdmins && !isGroupOwner && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 if (args[0] === 'close') {
-                    await Maria.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`*_SUCCESSFULLY CLOSED THE GRUP_\n\ngrup has been closed for the time being 😽*`)).catch((err) => reply(json(err)))
+                    await Maria.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`*_SUCCESSFULLY CLOSED THE GRUP_\n\ngrup has been closed for the time being*`)).catch((err) => reply(json(err)))
                 } else if (args[0] === 'open') {
                     await Maria.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`*THE GROUP HAS BEEN OPENED SUCCESSFULLY*`)).catch((err) => reply(json(err)))
                 } else {
@@ -1071,12 +1071,12 @@ case 'tag': case 'tagall': case 'all':{
           let response = await Maria.groupInviteCode(m.chat);
           Maria.sendText(
             m.sender,
-            ` 🤖𝐵𝑜𝑡 𝑛𝑎𝑚𝑒:- Maria Bot\n\n🔖𝐺𝑟𝑜𝑢𝑝 𝑛𝑎𝑚𝑒:- ${groupMetadata.subject}\n\n🔰𝐺𝑟𝑜𝑢𝑝 𝑙𝑖𝑛𝑘:- https://chat.whatsapp.com/${response}`,
+            ` 🤖𝐵𝑜𝑡 𝑛𝑎𝑚𝑒:- 9ine.x3\n\n🔖𝐺𝑟𝑜𝑢𝑝 𝑛𝑎𝑚𝑒:- ${groupMetadata.subject}\n\n🔰𝐺𝑟𝑜𝑢𝑝 𝑙𝑖𝑛𝑘:- https://chat.whatsapp.com/${response}`,
             m,
             { detectLink: true }
           );
         }
-        await Maria.sendMessage(m.chat, { video: { url: `https://media.tenor.com/hzWYhzhMTeEAAAPo/maria-useless.mp4` }, caption: 'I sent you the Group Link in personal message.\n Pls check.', gifPlayback: true }, { quoted: m });
+        await Maria.sendMessage(m.chat, { video: { url: `https://telegra.ph/file/15276bdf77985299af68d.mp4` }, caption: 'I sent you the Group Link in personal message.\n Pls check.', gifPlayback: true }, { quoted: m });
         break;
         
             case 'revoke':
@@ -1093,22 +1093,22 @@ case 'tag': case 'tagall': case 'all':{
             
             case "sc": case "script": case"repo": {
 const axios = require("axios");
-let repoInfo = await axios.get("https://api.github.com/repos/AYUSH-PANDEY023/Maria-MD");
+let repoInfo = await axios.get("https://api.github.com/repos/false-eye/Maria-MD");
         let repo = repoInfo.data;
         console.log(repo);
 
-   const scritxt = `*🚀𝑴𝒂𝒓𝒊𝒂-𝑩𝒐𝒕-𝑺𝒄𝒓𝒊𝒑𝒕🚀*\n
-  *🌟Creator:* 𝑨𝒚𝒖𝒔𝒉 𝒑𝒂𝒏𝒅𝒆𝒚\n
+   const scritxt = `*🚀9x3-𝑺𝒄𝒓𝒊𝒑𝒕🚀*\n
+  *🌟Creator:* 𝒇𝒂𝒍𝒔𝒆 𝒆𝒚𝒆\n
   *🌟 Repo:* ${repo.html_url}\n
   *🌟 Total Forks:* ${repo.forks_count}\n
   *⭐ Total Stars:* ${repo.stargazers_count}\n
   *📁 Repo Size:* ${(repo.size/1024).toFixed(2)} MB\n
   *📅 Last Updated:* ${repo.updated_at}\n
  
-©️ *Ayush Bots inc* 
+©️ *9ine.x3* 
 *❝ Dont forget to give a Star ⭐ to the repo.*`
 
-        Maria.sendMessage(from, { video: { url: 'https://media.tenor.com/Zco-fadJri4AAAPo/code-matrix.mp4' }, gifPlayback: true, caption: scritxt }, { quoted: m })
+        Maria.sendMessage(from, { video: { url: 'https://telegra.ph/file/6edbcb1d617098759d8af.mp4' }, gifPlayback: true, caption: scritxt }, { quoted: m })
 }
         break;
         
@@ -1118,7 +1118,7 @@ let repoInfo = await axios.get("https://api.github.com/repos/AYUSH-PANDEY023/Mar
                                 case 'sticker':
             case 'stiker':
             case 's': {
-                if (!quoted) return reply(` Reply to Video/Image with Caption ${prefix + command} darling`)
+                if (!quoted) return reply(` Reply to Video/Image with Caption ${prefix + command} nigga`)
                 if (/image/.test(mime)) {
                     let media = await quoted.download()
                     let encmedia = await Maria.sendImageAsSticker(m.chat, media, m, {
@@ -1135,7 +1135,7 @@ let repoInfo = await axios.get("https://api.github.com/repos/AYUSH-PANDEY023/Mar
                     })
                     await fs.unlinkSync(encmedia)
                 } else {
-                    return reply(` 🍭𝑹𝒆𝒑𝒍𝒚 𝒕𝒐 𝑽𝒊𝒅𝒆𝒐/𝑰𝒎𝒂𝒈𝒆 𝑾𝒊𝒕𝒉 𝑪𝒂𝒑𝒕𝒊𝒐𝒏 ${prefix + command} 𝒅𝒂𝒓𝒍𝒊𝒏𝒈`)
+                    return reply(` 🌟 𝑹𝒆𝒑𝒍𝒚 𝒕𝒐 𝑽𝒊𝒅𝒆𝒐/𝑰𝒎𝒂𝒈𝒆 𝑾𝒊𝒕𝒉 𝑪𝒂𝒑𝒕𝒊𝒐𝒏 ${prefix + command} 𝒅𝒂𝒓𝒍𝒊𝒏𝒈`)
                 }
             }
             break;
