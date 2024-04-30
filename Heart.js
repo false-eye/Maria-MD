@@ -32,7 +32,7 @@ let afk = require("./Gallery/lib/afk");
 const { fetchBuffer, buffergif } = require("./Gallery/lib/myfunc2")
 
 /////log
- global.modnumber = '919539901834' 
+ global.modnumber = '919060791616' 
 //Gallery/database
 let ntilinkall =JSON.parse(fs.readFileSync('./Gallery/database/antilink.json'));
 // let autoblck =JSON.parse(fs.readFileSync('./Gallery/database/autoblock.json'));
@@ -78,8 +78,9 @@ module.exports = Maria = async (Maria, m, msg, chatUpdate, store) => {
         var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectreply.selectedRowId : (m.mtype == 'templateButtonreplyMessage') ? m.message.templateButtonreplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectreply.selectedRowId || m.text) : ''
         var budy = (typeof m.text == 'string' ? m.text : '')
         
-        const prefix = global.prefa
+        const prefix = global.prefa || "."
         const isCmd = body.startsWith(prefix)
+        if (!isCmd || !body.startsWith(prefix)) return;
         const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase()
         const args = body.trim().split(/ +/).slice(1)
         const full_args = body.replace(command, '').slice(1).trim()
@@ -177,21 +178,7 @@ isForwarded: true,
 { quoted: m})
 }
 
-async function loading () {
-var Ayushlod = [
-"《 ▒▒▒▒▒▒▒▒▒▒▒》10%",
-"《 ████▒▒▒▒▒▒▒▒》30%",
-"《 ███████▒▒▒▒▒》50%",
-"《 ██████████▒▒》80%",
-"《 ████████████》100%",
-"Done ✅️"
-]
-let { key } = await Maria.sendMessage(from, {text: 'Loading...'})
-
-for (let i = 0; i < Ayushlod.length; i++) {
-await Maria.sendMessage(from, {text: Ayushlod[i], edit: key });
-}
-}
+//////////
 
 async function obfus(query) {
     return new Promise((resolve, reject) => {
@@ -233,7 +220,7 @@ async function Telesticker(url) {
             data2 = await axios(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getFile?file_id=${fileId}`)
             result = {
             status: 200,
-            author: '@false_eye',
+            author: '💙𓆩‎✘AʏᴜSʜ✘𓆪_✰',
             url: "https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" + data2.data.result.file_path
             }
             mariayresult.push(result)
@@ -275,7 +262,7 @@ async function Telesticker(url) {
         }
         
         if (autobio) {
-            Maria.updateProfileStatus(`Hey!,🌟 It's 9ine.x3 Made By 𝒇𝒂𝒍𝒔𝒆 𝒆𝒚𝒆. 💤 ${runtime(process.uptime())} `).catch(_ => _)
+            Maria.updateProfileStatus(`Hey, future leaders! 🌟 Maria-Md is here to inspire and lead, thanks to Ayush Botz, Inc. 🚀 ${runtime(process.uptime())} `).catch(_ => _)
         }
         if (m.sender.startsWith('212') && global.anti212 === true) {
             return Maria.updateBlockStatus(m.sender, 'block')
@@ -395,8 +382,8 @@ const mariafeature = () =>{
             
             case 'stealdp': {
             const user = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net';
-        if (user === botNumber) return m.reply('_🙅🏻 I can not steal my own profile picture, Nigga_');
-        const {key} = await m.reply("𝒑𝒍𝒆𝒂𝒔𝒆 𝒘𝒂𝒊𝒕...");
+        if (user === botNumber) return m.reply('_🙅🏻 I can not steal my own profile picture, Darling 🍭_');
+        const {key} = await m.reply("𝒑𝒍𝒆𝒂𝒔𝒆 𝒘𝒂𝒊𝒕 𝑫𝒂𝒓𝒍𝒊𝒏𝒈 🍭");
         let picture;
         try {
             picture = await getBuffer(await Maria.profilePictureUrl(user, 'image'));
@@ -501,7 +488,7 @@ reply(`Succes`)
 } else {
 var memeg = await Maria.updateProfilePicture(botNumber, { url: medis })
 fs.unlinkSync(medis)
-reply(`𝑺𝒖𝒄𝒄𝒆𝒔𝒔, 𝑻𝒉𝒂𝒏𝒌 𝒚𝒐𝒖 𝒇𝒐𝒓 𝒕𝒉𝒆 𝒏𝒆𝒘 𝒑𝒓𝒐𝒇𝒊𝒍𝒆 𝒑𝒉𝒐𝒕𝒐.`)
+reply(`𝑺𝒖𝒄𝒄𝒆𝒔𝒔, 𝑻𝒉𝒂𝒏𝒌 𝒚𝒐𝒖 𝒇𝒐𝒓 𝒕𝒉𝒆 𝒏𝒆𝒘 𝒑𝒓𝒐𝒇𝒊𝒍𝒆 𝒑𝒉𝒐𝒕𝒐, 𝒎𝒚 𝒅𝒂𝒓𝒍𝒊𝒏𝒈 😚`)
 }
 }
 break;
@@ -790,7 +777,7 @@ break;
             case 'leave':
                 if (!isCreator) return reply(mess.owner)
                 if (!m.isGroup) return reply(mess.group)
-                reply('🟨Bye Everyone...')
+                reply('🟨Bye Everyone 🥺')
                 await Maria.groupLeave(m.chat)
                 break;
             case 'bcgc':
@@ -809,9 +796,9 @@ break;
                         contextInfo: {
                             externalAdReply: {
                                 showAdAttribution: true,
-                                title: ' *🎐9ine.x3 Broadcast🎐* ',
+                                title: ' *🎐Maria Broadcast🎐* ',
                                 body: `Sent ${i.length} Group`,
-                                thumbnailUrl: 'https://telegra.ph/file/81557b0cd9531411346f3.jpg',
+                                thumbnailUrl: 'https://telegra.ph/file/3fd18ee11521117c7c882.jpg',
                                 sourceUrl: global.link,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -1043,7 +1030,7 @@ case 'tag': case 'tagall': case 'all':{
                 if (!isAdmins && !isGroupOwner && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 if (args[0] === 'close') {
-                    await Maria.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`*_SUCCESSFULLY CLOSED THE GRUP_\n\ngrup has been closed for the time being*`)).catch((err) => reply(json(err)))
+                    await Maria.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`*_SUCCESSFULLY CLOSED THE GRUP_\n\ngrup has been closed for the time being 😽*`)).catch((err) => reply(json(err)))
                 } else if (args[0] === 'open') {
                     await Maria.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`*THE GROUP HAS BEEN OPENED SUCCESSFULLY*`)).catch((err) => reply(json(err)))
                 } else {
@@ -1071,12 +1058,12 @@ case 'tag': case 'tagall': case 'all':{
           let response = await Maria.groupInviteCode(m.chat);
           Maria.sendText(
             m.sender,
-            ` 🤖𝐵𝑜𝑡 𝑛𝑎𝑚𝑒:- 9ine.x3\n\n🔖𝐺𝑟𝑜𝑢𝑝 𝑛𝑎𝑚𝑒:- ${groupMetadata.subject}\n\n🔰𝐺𝑟𝑜𝑢𝑝 𝑙𝑖𝑛𝑘:- https://chat.whatsapp.com/${response}`,
+            ` 🤖𝐵𝑜𝑡 𝑛𝑎𝑚𝑒:- Maria Bot\n\n🔖𝐺𝑟𝑜𝑢𝑝 𝑛𝑎𝑚𝑒:- ${groupMetadata.subject}\n\n🔰𝐺𝑟𝑜𝑢𝑝 𝑙𝑖𝑛𝑘:- https://chat.whatsapp.com/${response}`,
             m,
             { detectLink: true }
           );
         }
-        await Maria.sendMessage(m.chat, { video: { url: `https://telegra.ph/file/15276bdf77985299af68d.mp4` }, caption: 'I sent you the Group Link in personal message.\n Pls check.', gifPlayback: true }, { quoted: m });
+        await Maria.sendMessage(m.chat, { video: { url: `https://media.tenor.com/hzWYhzhMTeEAAAPo/maria-useless.mp4` }, caption: 'I sent you the Group Link in personal message.\n Pls check.', gifPlayback: true }, { quoted: m });
         break;
         
             case 'revoke':
@@ -1093,22 +1080,22 @@ case 'tag': case 'tagall': case 'all':{
             
             case "sc": case "script": case"repo": {
 const axios = require("axios");
-let repoInfo = await axios.get("https://api.github.com/repos/false-eye/Maria-MD");
+let repoInfo = await axios.get("https://api.github.com/repos/AYUSH-PANDEY023/Maria-MD");
         let repo = repoInfo.data;
         console.log(repo);
 
-   const scritxt = `*🚀9x3-𝑺𝒄𝒓𝒊𝒑𝒕🚀*\n
-  *🌟Creator:* 𝒇𝒂𝒍𝒔𝒆 𝒆𝒚𝒆\n
+   const scritxt = `*🚀𝑴𝒂𝒓𝒊𝒂-𝑩𝒐𝒕-𝑺𝒄𝒓𝒊𝒑𝒕🚀*\n
+  *🌟Creator:* 𝑨𝒚𝒖𝒔𝒉 𝒑𝒂𝒏𝒅𝒆𝒚\n
   *🌟 Repo:* ${repo.html_url}\n
   *🌟 Total Forks:* ${repo.forks_count}\n
   *⭐ Total Stars:* ${repo.stargazers_count}\n
   *📁 Repo Size:* ${(repo.size/1024).toFixed(2)} MB\n
   *📅 Last Updated:* ${repo.updated_at}\n
  
-©️ *9ine.x3* 
+©️ *Ayush Bots inc* 
 *❝ Dont forget to give a Star ⭐ to the repo.*`
 
-        Maria.sendMessage(from, { video: { url: 'https://telegra.ph/file/6edbcb1d617098759d8af.mp4' }, gifPlayback: true, caption: scritxt }, { quoted: m })
+        Maria.sendMessage(from, { video: { url: 'https://media.tenor.com/Zco-fadJri4AAAPo/code-matrix.mp4' }, gifPlayback: true, caption: scritxt }, { quoted: m })
 }
         break;
         
@@ -1118,7 +1105,7 @@ let repoInfo = await axios.get("https://api.github.com/repos/false-eye/Maria-MD"
                                 case 'sticker':
             case 'stiker':
             case 's': {
-                if (!quoted) return reply(` Reply to Video/Image with Caption ${prefix + command} nigga`)
+                if (!quoted) return reply(` Reply to Video/Image with Caption ${prefix + command} darling`)
                 if (/image/.test(mime)) {
                     let media = await quoted.download()
                     let encmedia = await Maria.sendImageAsSticker(m.chat, media, m, {
@@ -1135,7 +1122,7 @@ let repoInfo = await axios.get("https://api.github.com/repos/false-eye/Maria-MD"
                     })
                     await fs.unlinkSync(encmedia)
                 } else {
-                    return reply(` 🌟 𝑹𝒆𝒑𝒍𝒚 𝒕𝒐 𝑽𝒊𝒅𝒆𝒐/𝑰𝒎𝒂𝒈𝒆 𝑾𝒊𝒕𝒉 𝑪𝒂𝒑𝒕𝒊𝒐𝒏 ${prefix + command} 𝑵𝒊𝒈𝒈𝒂`)
+                    return reply(` 🍭𝑹𝒆𝒑𝒍𝒚 𝒕𝒐 𝑽𝒊𝒅𝒆𝒐/𝑰𝒎𝒂𝒈𝒆 𝑾𝒊𝒕𝒉 𝑪𝒂𝒑𝒕𝒊𝒐𝒏 ${prefix + command} 𝒅𝒂𝒓𝒍𝒊𝒏𝒈`)
                 }
             }
             break;
@@ -1178,7 +1165,7 @@ reply(`Photo/Video?`)
 break;
             case 'toimage':
             case 'toimg': {
-                if (!/webp/.test(mime)) return reply(`🌟𝑹𝒆𝒑𝒍𝒚 𝒔𝒕𝒊𝒄𝒌𝒆𝒓 𝒘𝒊𝒕𝒉 𝒄𝒂𝒑𝒕𝒊𝒐𝒏 ${prefix + command} 𝑵𝒊𝒈𝒈𝒂`)
+                if (!/webp/.test(mime)) return reply(`🍭𝑹𝒆𝒑𝒍𝒚 𝒔𝒕𝒊𝒄𝒌𝒆𝒓 𝒘𝒊𝒕𝒉 𝒄𝒂𝒑𝒕𝒊𝒐𝒏 ${prefix + command} 𝑫𝒂𝒓𝒍𝒊𝒏𝒈`)
                 reply(mess.wait)
                 let media = await Maria.downloadAndSaveMediaMessage(qmsg)
                 let ran = await getRandom('.png')
@@ -1198,7 +1185,7 @@ break;
             break;
             case 'tomp4':
             case 'tovideo': {
-                if (!/webp/.test(mime)) return reply(`🌟𝑹𝒆𝒑𝒍𝒚 𝒔𝒕𝒊𝒄𝒌𝒆𝒓 𝒘𝒊𝒕𝒉 𝒄𝒂𝒑𝒕𝒊𝒐𝒏 ${prefix + command} 𝑵𝒊𝒈𝒈𝒂`)
+                if (!/webp/.test(mime)) return reply(`🍭𝑹𝒆𝒑𝒍𝒚 𝒔𝒕𝒊𝒄𝒌𝒆𝒓 𝒘𝒊𝒕𝒉 𝒄𝒂𝒑𝒕𝒊𝒐𝒏 ${prefix + command} 𝑫𝒂𝒓𝒍𝒊𝒏𝒈`)
                 reply(mess.wait)
                 let media = await Maria.downloadAndSaveMediaMessage(qmsg)
                 let webpToMp4 = await webp2mp4File(media)
@@ -1215,7 +1202,7 @@ break;
             }
             break;
             case 'checkdeath':
-             if (!text) return replay(`Use Someone's Name, Example : ${prefix + command} Juice Wrld`)
+             if (!text) return replay(`Use Someone's Name, Example : ${prefix + command} Ayush`)
               predea = await axios.get(`https://api.agify.io/?name=${q}`)
               reply(`Name : ${predea.data.name}\n*Dead At Age :* ${predea.data.age} Year.\n\n_Quick, Quick, Repent Bro, Because No One Knows About Death_`)
               break;
@@ -1227,7 +1214,7 @@ break;
                 Maria.sendMessage(m.chat, {
                     document: audio,
                     mimetype: 'audio/mp3',
-                    fileName: `9ine-x3.mp3`
+                    fileName: `Maria-bot.mp3`
                 }, {
                     quoted: m
                 })
@@ -1354,7 +1341,7 @@ break;
             }
             break;
             case 'fliptext': {
-                if (args.length < 1) return reply(`Example:\n${prefix}fliptext 9ine.x3`)
+                if (args.length < 1) return reply(`Example:\n${prefix}fliptext Ayushy`)
                 quere = args.join(" ")
                 flipe = quere.split('').reverse().join('')
                 reply(`\`\`\`「 FLIP TEXT 」\`\`\`\n*•> Normal :*\n${quere}\n*•> Flip :*\n${flipe}`)
@@ -1385,7 +1372,7 @@ break;
 
 case 'play':  case 'song': {
 Maria.sendMessage(from, { react: { text: "📥", key: m.key }}) 
-if (!text) return reply(`🌟𝑷𝒍𝒆𝒂𝒔𝒆 𝒎𝒆𝒏𝒕𝒊𝒐𝒏 𝒂 𝒔𝒐𝒏𝒈 𝒏𝒂𝒎𝒆 \n\n 𝑬𝒙𝒂𝒎𝒑𝒍𝒆: ${prefix + command}  The colour Violet`)
+if (!text) return reply(`🍭𝑷𝒍𝒆𝒂𝒔𝒆 𝒎𝒆𝒏𝒕𝒊𝒐𝒏 𝒂 𝒔𝒐𝒏𝒈 𝒏𝒂𝒎𝒆 𝒅𝒂𝒓𝒍𝒊𝒏𝒈 \n\n 𝑬𝒙𝒂𝒎𝒑𝒍𝒆: ${prefix + command}  𝒂𝒏𝒊𝒎𝒆 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 𝒔𝒕𝒂𝒕𝒖𝒔`)
 const Ayushplaymp3 = require('./Gallery/lib/ytdl2')
 let yts = require("youtube-yts")
         let search = await yts(text)
@@ -1486,33 +1473,33 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
 //////////////////////////////
             case "rules":
       
-        const helptxt = `_*📍[Rules for 9ine.x3 usage]📍*_\n\n\n*>>>* use ${prefix}support to get the Official group link in your dm.\n\n*--->* If you want to add 9ine.x3 in your group the contact the owner by *${prefix}owner/${prefix}mods* \n\n*--->* Dont use wrong command, use the command given in the *${prefix}help* list \n\n* Dont spam the bot with commands if 9ine.x3 is not responding, its means the maybe owner is offline or facing internet issue. \n\n*IF YOU DONT FOLLOW THE RULES THEN YOU WILL BE BANNED* 🚫 \n\n\n*©️ 9x3* `
+        const helptxt = `_*📍[Rules for Maria Md usage]📍*_\n\n\n*>>>* use ${prefix}support to get the Official group link in your dm.\n\n*--->* If you want to add Maria-Md in your group the contact the owner by *${prefix}owner/${prefix}mods* \n\n*--->* Dont use wrong command, use the command given in the *${prefix}help* list \n\n* Dont spam the bot with commands if Maria-Md is not responding, its means the maybe owner is offline or facing internet issue. \n\n*IF YOU DONT FOLLOW THE RULES THEN YOU WILL BE BANNED* 🚫 \n\n\n*©️ Ayush Bots inc* `
 
-        Maria.sendMessage(from, { video: { url: 'https://telegra.ph/file/94fea97e8b4c0fb9ba871.mp4' }, gifPlayback: true, caption: helptxt }, { quoted: m })
+        Maria.sendMessage(from, { video: { url: 'https://c.tenor.com/geMdtLCXZkAAAAPo/rules.mp4' }, gifPlayback: true, caption: helptxt }, { quoted: m })
 
         break;
       case 'hii': case 'hi': case 'Hi':
        
         
-        let txxt = `*U^I^U ♡* Konichiwa ${pushname} Senpai, I'm 9ine.x3 Created by
+        let txxt = `*U^I^U ♡* Konichiwa ${pushname} Senpai, I'm MARIA-MD Created by
 
- *_𝒇𝒂𝒍𝒔𝒆 𝒆𝒚𝒆_*.`
+ *_Team Ayush_*.`
 
-        Maria.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/81557b0cd9531411346f3.jpg" }, caption: txxt}, { quoted: m });
+        Maria.sendMessage(m.chat, { image: { url: "https://graph.org/file/eb3821e4d2b0a54dd7ea6.jpg" }, caption: txxt}, { quoted: m });
         
         break;
       case "support":
      
-        let tex = `  [🎀𝙎𝙐𝙋𝙋𝙊𝙍𝙏 𝙂𝙍𝙊𝙐𝙋🎀]\n\n🔖_https://t.me/sarca_stics_`
+        let tex = `  [🎀𝙎𝙐𝙋𝙋𝙊𝙍𝙏 𝙂𝙍𝙊𝙐𝙋🎀]\n\n🔖_https://chat.whatsapp.com/FGPKxVnjgJ7KnBGiDeb4ij_`
 
-        await Maria.sendMessage(m.sender,{ video: {url: "https://telegra.ph/file/717241a72afc44d510d34.mp4"}, caption: `${tex}`,gifPlayback: true},);
+        await Maria.sendMessage(m.sender,{ video: {url: "https://media.tenor.com/q5Lo2BINkaUAAAPo/beast-tamer-kanade.mp4"}, caption: `${tex}`,gifPlayback: true},);
 
-        await Maria.sendMessage(m.chat, { video: { url: "https://telegra.ph/file/2cfae5970d2729a52aa69.mp4" }, caption: '🎀𝑪𝒉𝒆𝒄𝒌 𝑰 𝑺𝒆𝒏𝒕 𝒔𝒖𝒑𝒑𝒐𝒓𝒕 𝒈𝒓𝒐𝒖𝒑 𝒍𝒊𝒏𝒌 𝒊𝒏 𝒚𝒐𝒖𝒓 𝑫𝑴', gifPlayback: true }, { quoted: m });
+        await Maria.sendMessage(m.chat, { video: { url: "https://media.tenor.com/27yYlTvQ6B0AAAPo/my-dress-up-darling-my-dress-up-darling-gif.mp4" }, caption: '🎀𝑪𝒉𝒆𝒄𝒌 𝑰 𝑺𝒆𝒏𝒕 𝒔𝒖𝒑𝒑𝒐𝒓𝒕 𝒈𝒓𝒐𝒖𝒑 𝒍𝒊𝒏𝒌 𝒊𝒏 𝒚𝒐𝒖𝒓 𝑫𝑴  𝑴𝒚 𝑫𝒂𝒓𝒍𝒊𝒏𝒈', gifPlayback: true }, { quoted: m });
         break;
 
       case "info":
             Maria.sendMessage(from, { react: { text: "", key: m.key }}) 
-        let pifx = `❁ ════ ❃•💙 *9x3* 💙•❃ ════ ❁
+        let pifx = `❁ ════ ❃•💙 *MARIA* 💙•❃ ════ ❁
 
 \`\`\`A FULL FLEDGED MULTI DEVICE WHATSAPP BOT WITH COOL FEATURES\`\`\`
 
@@ -1520,16 +1507,16 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
 \`\`\`A simple and easy-to-use WhatsApp bot project based on Multi-Device Baileys and written in JavaScript\`\`\`
 
 ❁ ══════ ❃•📄 *NOTE* 📄•❃ ══════ ❁
-\`\`\`This bot is a free open source project\`\`\`
+\`\`\`This bot is a free open source project by THE TEAM AYUSH\`\`\`
 
 ❁ ═════ ❃•📑 *GITHUB* 📑•❃ ═════ ❁
-*_LINK:- https://github.com/false-eye/Maria-MD_*
+*_LINK:- https://github.com/AYUSH-PANDEY023/Maria-MD_*
 
 
 ❁ ═══ ❃•✍🏻 *CONTRIBUTE* ✍🏻•❃ ═══ ❁
 \`\`\`Feel free to open issues regarding any problems or if you have any feature feel free to contact owner by typing ${prefix}owner or ${prefix}mods`
 
-Maria.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/35a8070434cf5dfaeed28.jpg" }, caption: pifx, gifPlayback: true }, { quoted: m });
+Maria.sendMessage(m.chat, { image: { url: "https://graph.org/file/c8ad7dc322c0b9b7eca8f.jpg" }, caption: pifx, gifPlayback: true }, { quoted: m });
         break;
 
 
@@ -1548,7 +1535,7 @@ Maria.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/35a8070434cf5
 
 
 case 'wanumber': case 'nowa': case 'searchnumber':{
-           	if (!text) return reply(`📵🔢 Enter a number ending with 'x'\n\nExample: ${prefix + command} 9195399018xx`)
+           	if (!text) return reply(`📵🔢 Enter a number ending with 'x'\n\nExample: ${prefix + command} 9199311223xx`)
 var inputnumber = text.split(" ")[0]
         
         reply(`📱🔍 Exploring for WhatsApp accounts within the range...`)
@@ -1705,7 +1692,7 @@ case 'truth':
                            const truth =[
                                   "Have you ever liked anyone? How long?",
                  "If you can or if you want, which gc/outside gc would you make friends with? (maybe different/same type)",
-                 "What is your biggest fear??",
+                 "apa ketakutan terbesar kamu?",
                  "Have you ever liked someone and felt that person likes you too?",
                  "What is the name of your friend's ex-girlfriend that you used to secretly like?",
                  "Have you ever stolen money from your father or mom? The reason?",
@@ -1797,23 +1784,186 @@ case 'truth':
                            buffer = await getBuffer(`https://graph.org/file/8dd92e67cd4019b092f53.jpg`)
                            Maria.sendMessage(from, { image: buffer, caption: '*You have chosen Truth*\n'+ Mariatruthww }, {quoted:m})
                            break;
+case 'insult': {
+	if (!m.isGroup) return reply(mess.group)
+	const insults = [
+  "You're as useless as the 'ueue' in 'queue'.",
+  "I'm jealous of all the people who haven't met you.",
+  "You bring everyone a lot of joy... when you leave the room.",
+  "If laughter is the best medicine, your face must be curing the world.",
+  "I'd like to see things from your point of view, but I can't seem to get my head that far up my butt.",
+  "If I wanted to kill myself, I'd climb your ego and jump to your IQ.",
+  "You're not stupid; you just have bad luck when thinking.",
+  "I'd slap you, but that would be animal abuse.",
+  "If you were any slower, you’d be going backward.",
+  "You must have been born on a highway because that's where most accidents happen.",
+  "I'd insult you, but then I'd have to explain it afterward.",
+  "You're not dumb. You just have bad luck thinking.",
+  "You're like a cloud. When you disappear, it's a beautiful day.",
+  "I bet your brain feels as good as new, seeing that you never use it.",
+  "You're the reason the gene pool needs a lifeguard.",
+  "It looks like your face caught on fire, and someone tried to put it out with a fork.",
+  "I'm sorry, I didn't mean to give you the impression that I actually cared about your opinion.",
+  "If brains were dynamite, you wouldn’t have enough to blow your nose.",
+  "If you were twice as smart, you'd still be stupid.",
+  "I'm not insulting you; I'm describing you.",
+  "I'm not saying you're stupid; I'm just saying you have bad luck when it comes to thinking.",
+  "The only way you'll ever get laid is if you crawl up a chicken's butt and wait.",
+  "You must have been born at a low altitude because your brain seems to lack oxygen.",
+  "You're not just a clown; you're the entire circus.",
+  "If you were any more inbred, you'd be a sandwich.",
+  "I'd agree with you, but then we'd both be wrong.",
+  "I'd call you a tool, but even they serve a purpose.",
+  "You're like Monday mornings - nobody likes you.",
+  "If ignorance is bliss, you must be the happiest person on Earth.",
+  "You're not the dumbest person in the world, but you'd better hope they don't die.",
+  
+];
+
+
+function getRandomInsult() {
+  return insults[Math.floor(Math.random() * insults.length)];
+}
+
+  const randomInsult = getRandomInsult();
+  reply(randomInsult);
+}
+break;
+
+
+case 'flirt': {
+	if (!m.isGroup) return reply(mess.group)
+	const flirtLines = [
+  "Are you a magician? Because whenever I look at you, everyone else disappears.",
+  "Do you have a map? Because I just got lost in your eyes.",
+  "Are you made of copper and tellurium? Because you're Cu-Te.",
+  "Are you a camera? Because every time I look at you, I smile.",
+  "Is it hot in here or is it just you?",
+  "Do you believe in love at first sight, or should I walk by again?",
+  "Excuse me, but I think the stars are shining a little brighter tonight because you're around.",
+  "If beauty were a crime, you'd be serving a life sentence.",
+  "Do you have a Band-Aid? Because I just scraped my knee falling for you.",
+  "Do you have a name, or can I call you mine?",
+  "Do you believe in fate? Because I think we were meant to meet.",
+  "If you were a vegetable, you'd be a cute-cumber.",
+  "Do you have a sunburn, or are you always this hot?",
+  "Do you have a map? I keep getting lost in your eyes.",
+  "If you were a fruit, you'd be a fineapple.",
+  "If kisses were snowflakes, I'd send you a blizzard.",
+  "Can I follow you home? Cause my parents always told me to follow my dreams.",
+  "Do you have a name or can I call you mine?",
+  "Are you a parking ticket? Because you've got FINE written all over you.",
+  "Do you have a name or can I call you mine?",
+  "If looks could kill, you'd be a weapon of mass destruction.",
+  "You must be made of copper and tellurium because you're Cu-Te.",
+  "Do you have a name, or can I call you mine?",
+  "Are you a time traveler? Because I can see you in my future.",
+  "Is there an airport nearby or is it my heart taking off?",
+  "Are you a Wi-Fi signal? Because I'm really feeling a connection.",
+  "I must be a snowflake because I've fallen for you.",
+  "Do you believe in love at first sight, or should I walk by again?",
+  "I'm not a photographer, but I can definitely picture us together.",
+  "Do you have a name, or can I call you mine?",
+  "Do you have a name, or can I call you mine?",
+];
+function getRandomFlirtLine() {
+  return flirtLines[Math.floor(Math.random() * flirtLines.length)];
+}
+  const randomFlirtLine = getRandomFlirtLine();
+  reply(randomFlirtLine);
+}
+break;
+  
+
+case 'shayari': {
+	if (!m.isGroup) return reply(mess.group)
+	const shayariLines = [
+  "Dil se roya humne, aankhon se nikla hai pyaar,\nZakhm gehra humne khaya, dil se hai yaar.\n",
+  "Khuda ke bando pe naaz hai insaan ko,\nApne hi hatho se khud ne ki hai tabaahi.\n",
+  "Mohabbat ek aisi bheed hai,\nJisme har ek dil hai tanha.\n",
+  "Dil ko chhune wale shabd kya kamaal ke hote hain,\nUnki misaalein di jaati hain, aashiq to sirf yaad kiye jaate hain.\n",
+  "Tere bina jeena kya, tere sang mar jaana hai,\nTeri baahon mein kho jaana, yahi toh pyaar ka asli matlab hai.\n",
+  "Mohabbat ka izhaar karne mein waqt toh lagta hai,\nPar sachai aur dil se nikle alfaz kabhi nahin bhoolte.\n",
+  "Har raat rote hain hum, har subah umeed se guzar jaati hai,\nKuchh rishte aise bhi hote hain, jinke saath guzarti zindagi bhi yaadon mein dafan ho jaati hai.\n",
+  "Rishte toh khoon se bhi gehre hote hain,\nPar woh rishte jo dil se jud jaate hain, unka toh koi saani nahin hota.\n",
+  "Mohabbat mein zindagi ko pyaari kar dena,\nAur pyaar mein zindagi ko jeena seekh lena,\nYahi toh hai asli mohabbat ka matlab.\n",
+  
+];
+
+
+function getRandomShayariLine() {
+  return shayariLines[Math.floor(Math.random() * shayariLines.length)];
+}
+  const randomShayariLine = getRandomShayariLine();
+  reply(randomShayariLine);
+}
+break;
+
+
+
+
+case 'joke': {
+	if (!m.isGroup) return reply(mess.group)
+	
+	const jokes = [
+  "Why don't scientists trust atoms? Because they make up everything!",
+  "What do you call fake spaghetti? An impasta!",
+  "Why did the scarecrow win an award? Because he was outstanding in his field!",
+  "Why couldn't the bicycle stand up by itself? It was two-tired!",
+  "I told my wife she was drawing her eyebrows too high. She looked surprised!",
+  "What did one ocean say to the other ocean? Nothing, they just waved!",
+  "Why did the tomato turn red? Because it saw the salad dressing!",
+  "What do you call cheese that isn't yours? Nacho cheese!",
+  "Why did the math book look sad? Because it had too many problems!",
+  "What do you get when you cross a snowman and a vampire? Frostbite!",
+  "Why don't skeletons fight each other? They don't have the guts!",
+  "What did one plate say to the other plate? Dinner's on me!",
+  "Why did the golfer bring two pairs of pants? In case he got a hole in one!",
+  "Why couldn't the leopard play hide and seek? Because he was always spotted!",
+  "Why did the man put his money in the blender? He wanted to make liquid assets!",
+  "Why don't eggs tell jokes? Because they'd crack each other up!",
+  "What do you call a bear with no teeth? A gummy bear!",
+  "What did one hat say to the other hat? Stay here, I'm going on ahead!",
+  "Why did the cookie go to the doctor? Because it was feeling crumbly!",
+  "What do you call a fish wearing a bowtie? Sophis-fish-ticated!",
+  "What do you get when you cross a snowman and a dog? Frostbite!",
+  "Why did the picture go to jail? Because it was framed!",
+  "Why did the scarecrow win an award? Because he was outstanding in his field!",
+  "Why did the tomato turn red? Because it saw the salad dressing!",
+  "What did one ocean say to the other ocean? Nothing, they just waved!",
+  "Why did the math book look sad? Because it had too many problems!",
+  "Why don't scientists trust atoms? Because they make up everything!",
+  "What did one plate say to the other plate? Dinner's on me!",
+  "Why couldn't the bicycle stand up by itself? It was two-tired!",
+  "What did one hat say to the other hat? Stay here, I'm going on ahead!",
+  "Why did the golfer bring two pairs of pants? In case he got a hole in one!",
+];
+
+function getRandomJoke() {
+  return jokes[Math.floor(Math.random() * jokes.length)];
+}
+  const randomJoke = getRandomJoke();
+  reply(randomJoke);
+}
+break;
+                         
                            
   case 'menu': case 'help': case 'h': 
       const txt = `╭─「 *Konichiwa* 」
-│⋊ User: ${pushname} 
-│⋊ Bot:  ${botname}
-│⋊ Prefix:  *${prefix}*
-│⋊ Date: ${xdate}
-│⋊ Time:  ${xtime}
-│⋊ Owner: ${ownername}
-│⋊ Version: ${mver}
-│⋊ Host: ${os.hostname()}
-│⋊ Platform: ${os.platform()} 
-│⋊ Runtime: ${runtime(process.uptime())}
-│⋊ TotalCmd: ${mariafeature()}
-│⋊ TG Channel: https://t.me/sarca_stics
+│⋊ 𝕌𝕤𝕖𝕣: ${pushname} 
+│⋊ 𝔹𝕠𝕥:  ${botname}
+│⋊ ℙ𝕣𝕖𝕗𝕚𝕩:  *${prefix}*
+│⋊ 𝔻𝕒𝕥𝕖: ${xdate}
+│⋊ 𝕋𝕚𝕞𝕖:  ${xtime}
+│⋊ 𝕆𝕨𝕟𝕖𝕣: ${ownername}
+│⋊ 𝕧𝕖𝕣𝕤𝕚𝕠𝕟: ${mver}
+│⋊ ℍ𝕠𝕤𝕥: ${os.hostname()}
+│⋊ ℙ𝕝𝕒𝕥𝕗𝕠𝕣𝕞: ${os.platform()} 
+│⋊ ℝ𝕦𝕟𝕥𝕚𝕞𝕖: ${runtime(process.uptime())}
+│⋊ 𝕋𝕠𝕥𝕒𝕝𝕔𝕞𝕕: ${mariafeature()}
+│⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕣𝕠𝕦𝕡: https://gg.gg/Maria-support
 ╰────────────┈平和
- 🎀𝐅𝐨𝐥𝐥𝐨𝐰 𝐨𝐧: https://www.instagram.com/false_eye
+ 🎀𝐅𝐨𝐥𝐥𝐨𝐰 𝐨𝐧: https://www.instagram.com/ayushpandeyy_023
 
 Here's the list of my Commands.🔖
 ${readmore}
@@ -1884,6 +2034,10 @@ ${readmore}
 │⊳🎟️ ${prefix}dare
 │⊳🎟️ ${prefix}couple 
 │⊳🎟️ ${prefix}Ship
+│⊳🎟️ ${prefix}insult 
+│⊳🎟️ ${prefix}flirt
+│⊳🎟️ ${prefix}shayari
+│⊳🎟️ ${prefix}joke
 │⊳🎟️ ${prefix}soulmate
 │⊳🎟️ ${prefix}checkdeath
 │⊳🎟️ ${prefix}uglycheck
@@ -2080,16 +2234,16 @@ case 'public': {
 │⊳ 💦  ${prefix}ass
 │⊳ 💦  ${prefix}trap
 │⊳ 💦  ${prefix}maal
-│⊳ 💦  ${prefix}ribbons
-│⊳ 💦  ${prefix}hatsunemiku 
-│⊳ 💦  ${prefix}headband
-│⊳ 💦  ${prefix}foxgirl
-│⊳ 💦  ${prefix}animalears
-│⊳ 💦  ${prefix}bra
-│⊳ 💦  ${prefix}skirt
-│⊳ 💦  ${prefix}breasts 
-│⊳ 💦  ${prefix}tattoo 
-│⊳ 💦  ${prefix}chain
+│⊳ 💦  ${prefix}ʀɪʙʙᴏɴꜱ
+│⊳ 💦  ${prefix}ʜᴀᴛꜱᴜɴᴇᴍɪᴋᴜ
+│⊳ 💦  ${prefix}ʜᴇᴀᴅʙᴀɴᴅ
+│⊳ 💦  ${prefix}ꜰᴏxɢɪʀʟ
+│⊳ 💦  ${prefix}ᴀɴɪᴍᴀʟᴇᴀʀꜱ
+│⊳ 💦  ${prefix}ʙʀᴀ
+│⊳ 💦  ${prefix}ꜱᴋɪʀᴛ
+│⊳ 💦  ${prefix}ʙʀᴇᴀꜱᴛꜱ
+│⊳ 💦  ${prefix}ᴛᴀᴛᴛᴏᴏ
+│⊳ 💦  ${prefix}ᴄʜᴀɪɴ
 └──────────⊰ 
 `
         Maria.sendMessage(m.chat, { image: { url: "./Gallery/nsfw.jpg" }, caption: nsfwmenu }, { quoted: m });
@@ -2221,7 +2375,7 @@ case 'doraemon': {
   reply(mess.wait);
   await Maria.sendMessage(m.chat, {
     image: await getBuffer('https://doremon-api.onrender.com'), // Change the URL to your Doraemon wallpaper
-    caption: 'Check out this Doraemon wallpaper! 🤖✨\n\n© 9ine.x3', // Customize the caption as you like
+    caption: 'Check out this Doraemon wallpaper! 🤖✨\n\n© Ayush Botz.Inc', // Customize the caption as you like
   }, { quoted: m });
 }
 break;
@@ -2231,7 +2385,7 @@ case 'pokemon': {
   reply(mess.wait);
   await Maria.sendMessage(m.chat, {
     image: await getBuffer('https://ayush-pokemon.onrender.com/'), // Change the URL to your Pokemon wallpaper
-    caption: 'Here is a Pokemon wallpaper for you! ⚡🔥\n\n© 9ine.x3', // Customize the caption as you like
+    caption: 'Here is a Pokemon wallpaper for you! ⚡🔥\n\n© Ayush Botz.Inc', // Customize the caption as you like
   }, { quoted: m });
 }
 break;
@@ -2241,7 +2395,7 @@ case 'zero-two': {
   reply(mess.wait);
   await Maria.sendMessage(m.chat, {
     image: await getBuffer('https://ayush-zero-two.onrender.com'), // Change the URL to your Zero-Two wallpaper
-    caption: 'Enjoy this Zero-Two wallpaper! ❤️🖤\n\n© 9ine.x3', // Customize the caption as you like
+    caption: 'Enjoy this Zero-Two wallpaper! ❤️🖤\n\n© Ayush Botz.Inc', // Customize the caption as you like
   }, { quoted: m });
 }
 break;
@@ -2296,7 +2450,7 @@ case 'hidetag': {
   
  *Message : ${text}*\n\n`
  for (let mem of groupAdmins) {
- teks += `🌟 @${mem.split('@')[0]}\n`
+ teks += `🤴 @${mem.split('@')[0]}\n`
  }
  Maria.sendMessage(m.chat, { text: teks, mentions: groupAdmins}, { quoted: m })
  }
@@ -2305,7 +2459,7 @@ case 'hidetag': {
 
 			    
          case 'pinterest':
-      case 'pin': {
+      case 'img': {
       if (!args.join(" ")) return reply(`🧩${pushname}Please provide a search term!`);
         reply(mess.waiting)
         let { pinterest } = require('./Gallery/lib/scraper');
@@ -2393,7 +2547,7 @@ case 'welcome':
 
 
 case 'git': case 'gitclone':
-if (!text) return reply(`🧩Where is the link?\n🔮Example :\n${prefix}${command} https://github.com/false-eye/Maria-Md `)
+if (!text) return reply(`🧩Where is the link?\n🔮Example :\n${prefix}${command} https://github.com/AYUSH-PANDEY023/Maria-Md `)
 if (!isUrl(text) && !text.includes('github.com')) return reply(`Link invalid!!`)
     let repo = text.split('/');
     let url = `https://api.github.com/repos/${repo[3]}/${repo[4]}/zipball`
@@ -2403,8 +2557,8 @@ break;
 
 case '':
     if (isCmd) {
-        let nexh = `🌟 𝑫𝒊𝒅 𝒀𝒐𝒖 𝑴𝒆𝒂𝒏 ${prefix}𝒉𝒆𝒍𝒑`
-Maria.sendMessage(m.chat, { video: { url: "https://telegra.ph/file/3bc3e04fdf6ce3143aedc.mp4" }, caption: nexh, gifPlayback: true }, { quoted: m });
+        let nexh = `🍭𝑫𝒂𝒓𝒍𝒊𝒏𝒈 𝑫𝒊𝒅 𝒀𝒐𝒖 𝑴𝒆𝒂𝒏 ${prefix}𝒉𝒆𝒍𝒑`
+Maria.sendMessage(m.chat, { video: { url: "https://media.tenor.com/M_MWR-Y4eigAAAPo/clannad-after-story-clannad.mp4" }, caption: nexh, gifPlayback: true }, { quoted: m });
     }
     break;
     
@@ -2455,7 +2609,7 @@ case 'naturetypography':
 case 'quotesunder':
 case 'shinetext':{
 
-if (!q) return reply(`🔮Example : ${prefix+command} 9x3`) 
+if (!q) return reply(`🔮Example : ${prefix+command} Ayush`) 
 let link
 if (/stonetext/.test(command)) link = 'https://photooxy.com/online-3d-white-stone-text-effect-utility-411.html'
 if (/writeart/.test(command)) link = 'https://photooxy.com/logo-and-text-effects/write-art-quote-on-wood-heart-370.html'
@@ -2494,7 +2648,7 @@ if (!m.isGroup) return replay(mess.grouponly)
             let [poll, opt] = text.split("|")
             if (text.split("|") < 2)
                 return await reply(
-                    `Mention question and atleast 2 options\nExample: ${prefix}poll Who is gay here?|Dennis,Shelon,Edith...`
+                    `Mention question and atleast 2 options\nExample: ${prefix}poll Who is best admin?|Ayush,Maria,Owner...`
                 )
             let options = []
             for (let i of opt.split(',')) {
@@ -2517,7 +2671,7 @@ case "creategc":
           try {
             let cret = await Maria.groupCreate(args.join(" "), []);
             let response = await Maria.groupInviteCode(cret.id);
-            teks = ` 《𝙂𝙧𝙤𝙪𝙥 𝘾𝙧𝙚𝙖𝙩𝙚》
+            teks = ` 《༒𝙂𝙧𝙤𝙪𝙥 𝘾𝙧𝙚𝙖𝙩𝙚༒》
 
 ☤Name : ${cret.subject}
 ☤Owner : @${cret.owner.split("@")[0]}
@@ -2548,17 +2702,17 @@ https://chat.whatsapp.com/${response}
 case 'developer':
 case 'dev':
     const devmod = `  🍥 *Moderators* 🍥\n\n
-*🎫false eye* @919539901834
+*🎫Ayush* @919931122319
 
-*🎫9ine.x3* @918590717599
+*🎫xeon* @916909137213
 
-*🎫Me again* @919539901834
+*🎫Pikachu* @918811074852
 
-*🎫9x3 again* @918590717599
+*🎫OldUser* @918602239106
  \n
-\n📛*Don't Spam them to avoid Blocking !*\n\n For any help, type *${prefix}support* and ask in the group.\n\n*✨️Thanks for using* `;
+\n📛*Don't Spam them to avoid Blocking !*\n\n For any help, type *${prefix}support* and ask in the group.\n\n*✨️Thanks for using Maria-Md* `;
 
-    Maria.sendMessage(m.chat, { text: devmod, mentions: ["919539901834@s.whatsapp.net"] }, { quoted: m });
+    Maria.sendMessage(m.chat, { text: devmod, mentions: ["919931122319@s.whatsapp.net", "918811074852@s.whatsapp.net", "916909137213@s.whatsapp.net","918602239106@s.whatsapp.net"] }, { quoted: m });
     break;
 
 
@@ -2689,13 +2843,13 @@ case 'poker': {
         let resultMessage = `\t\uD83C\uDCCF *Poker Prestige* \uD83C\uDCCF\n`;
         resultMessage += `\t\t---------------------------------\n`;
         resultMessage += `*@${m.sender.split("@")[0]}*'s Hand: ${userHand.join(', ')}\n`;
-        resultMessage += `*9x3*'s Hand: ${mariaHand[0]}, \n`;
+        resultMessage += `*Maria*'s Hand: ${mariaHand[0]}, \n`;
         resultMessage += `\t\t---------------------------------\n`;
 
         if (userScore > mariaScore) {
             resultMessage += `\t\t\uD83C\uDF89 Congratulations! You win! \uD83C\uDF89`;
         } else if (userScore < mariaScore) {
-            resultMessage += `\t\t\uD83D\uDE22 Better luck next time. 9x3 wins. \uD83D\uDE22`;
+            resultMessage += `\t\t\uD83D\uDE22 Better luck next time. Maria wins. \uD83D\uDE22`;
         } else {
             resultMessage += `\t\t\uD83C\uDF9D It's a tie! \uD83C\uDF9D`;
         }
@@ -2906,7 +3060,7 @@ break;
   
 case 'google': {
 Maria.sendMessage(from, { react: { text: "🔎", key: m.key }}) 
-if (!q) return reply(`Example : ${prefix + command} Drake's Snake`)
+if (!q) return reply(`Example : ${prefix + command} 𝘈𝘺𝘶𝘴𝘩 𝘱𝘢𝘯𝘥𝘦𝘺`)
 let google = require('google-it')
 google({'query': text}).then(res => {
 let teks = `「🏮 *Google Search Engine*🏮」 \n\n
@@ -3021,7 +3175,7 @@ case 'chat':
       case "run":      
         if (!text) {
           return m.reply(
-            `🍭 𝑷𝒍𝒆𝒂𝒔𝒆 𝒑𝒓𝒐𝒗𝒊𝒅𝒆 𝒂 𝒄𝒐𝒎𝒎𝒂𝒏𝒅 𝒕𝒐 𝒆𝒙𝒆𝒄𝒖𝒕𝒆! \n\n 𝑬𝒙𝒂𝒎𝒑𝒍𝒆: *${prefix}𝒆𝒙𝒆𝒄 𝒎.𝒓𝒆𝒑𝒍𝒚("3𝒓𝒅 𝒑𝒂𝒓𝒕𝒚 𝒄𝒐𝒅𝒆 𝒊𝒔 𝒃𝒆𝒊𝒏𝒈 𝒆𝒙𝒆𝒄𝒖𝒕𝒆𝒅...")*`
+            `🍭𝑫𝒂𝒓𝒍𝒊𝒏𝒈 𝑷𝒍𝒆𝒂𝒔𝒆 𝒑𝒓𝒐𝒗𝒊𝒅𝒆 𝒂 𝒄𝒐𝒎𝒎𝒂𝒏𝒅 𝒕𝒐 𝒆𝒙𝒆𝒄𝒖𝒕𝒆! \n\n 𝑬𝒙𝒂𝒎𝒑𝒍𝒆: *${prefix}𝒆𝒙𝒆𝒄 𝒎.𝒓𝒆𝒑𝒍𝒚("3𝒓𝒅 𝒑𝒂𝒓𝒕𝒚 𝒄𝒐𝒅𝒆 𝒊𝒔 𝒃𝒆𝒊𝒏𝒈 𝒆𝒙𝒆𝒄𝒖𝒕𝒆𝒅...")*`
           );
         }
         try {
@@ -3035,7 +3189,7 @@ case 'chat':
         
 case "info":
             Maria.sendMessage(from, { react: { text: "", key: m.key }}) 
-        let ifx = `❁ ════ ❃•💙 *9ine.x3* 💙•❃ ════ ❁
+        let ifx = `❁ ════ ❃•💙 *MARIA* 💙•❃ ════ ❁
 
 \`\`\`A FULL FLEDGED MULTI DEVICE WHATSAPP BOT WITH COOL FEATURES\`\`\`
 
@@ -3043,16 +3197,16 @@ case "info":
 \`\`\`A simple and easy-to-use WhatsApp bot project based on Multi-Device Baileys and written in JavaScript\`\`\`
 
 ❁ ══════ ❃•📄 *NOTE* 📄•❃ ══════ ❁
-\`\`\`This bot is a free open source project\`\`\`
+\`\`\`This bot is a free open source project by THE TEAM AYUSH\`\`\`
 
 ❁ ═════ ❃•📑 *GITHUB* 📑•❃ ═════ ❁
-*_LINK:- https://github.com/false-eye/Maria-MD_*
+*_LINK:- https://github.com/AYUSH-PANDEY023/Maria-MD_*
 
 
 ❁ ═══ ❃•✍🏻 *CONTRIBUTE* ✍🏻•❃ ═══ ❁
 \`\`\`Feel free to open issues regarding any problems or if you have any feature feel free to contact owner by typing ${prefix}owner or ${prefix}mods`
 
-Maria.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/81557b0cd9531411346f3.jpg" }, caption: ifx, gifPlayback: true }, { quoted: m });
+Maria.sendMessage(m.chat, { image: { url: "https://graph.org/file/c8ad7dc322c0b9b7eca8f.jpg" }, caption: ifx, gifPlayback: true }, { quoted: m });
         break;
 
 
@@ -3062,7 +3216,7 @@ Maria.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/81557b0cd9531
         let tifx = `*𝚃𝙴𝚁𝙼𝚜 𝙰𝙽𝙳 𝙲𝙾𝙽𝙳𝙸𝚃𝙸𝙾𝙽*\n\n
 ⍟ *────────────────* ⍟ 
 
-📝 Note: Beware of fake 9x3 bots! People may falsely claim to represent 9ine.x3. Please exercise caution.
+📝 Note: Beware of fake Maria-MD bots! People may falsely claim to represent Maria-MD. Please exercise caution.
 
 _Whatsapp Bots have become increasingly popular, but with that comes the risk of encountering fake accounts. Stay vigilant._
 
@@ -3077,19 +3231,19 @@ _Whatsapp Bots have become increasingly popular, but with that comes the risk of
 
 _We will update the bot's terms and conditions periodically, so it's your responsibility to check our support groups for updates._
 _If you have any questions regarding our terms, please reach out to us._
-_For everything else, use common sense nigga._
+_For everything else, use common sense._
 
-*We don't trust you!~false eye*
-*_🌟9ine.x3 ft. false eye_*
+*FUTURE IS NOW🚀~MARIA-MD*
+*_🚀Team Ayush_*
 
 ⍟ *────────────────* ⍟`
 
-Maria.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/81557b0cd9531411346f3.jpg" }, caption: tifx, gifPlayback: true }, { quoted: m });
+Maria.sendMessage(m.chat, { image: { url: "https://graph.org/file/c8ad7dc322c0b9b7eca8f.jpg" }, caption: tifx, gifPlayback: true }, { quoted: m });
         break;
 /////////////////////////////////////////////////////
 
 if(isCmd){
-          reply (`No such command, Nigga!`)
+          reply (`No such command, Baka!`)
   
       }	 			
 
